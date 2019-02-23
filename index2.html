@@ -1,0 +1,235 @@
+<!--Group 1, CPSC 1045-002, Group Project-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Group Project - Guessing Game</title>
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="mystyle2.css">
+    <!-- External file for icons only -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <script src="myscript.js" defer></script>
+  </head>
+
+  <body onload="setup()">
+    <div id="content">
+      <div id="title">
+        <div class="inner">
+          <p><i class="far fa-lightbulb"></i> Guessing Game <i class="far fa-lightbulb"></i></p>
+        </div>
+      </div>
+      <br>
+      <!--Question 1: Guittar goes here-->
+      <div id="question0" class="questionStyle" hidden>
+        <h1>Question 1</h1><br>
+
+        <button class="levelbuttons level1" type="button">Level 1</button><br><br>
+
+        <p>This question is the easiest one in the Level 1! Let's start warming up!</p><br>
+        <p>How many strings does a guittar have? Type your question bellow. </p><br>
+        <img src="images/guittar.jpg" alt="guittar">
+        <!-- <canvas id="myCanvas0"
+                width="800"
+                height="400"
+                style="border: solid"
+                src="images/guittar.jpg">
+        </canvas> -->
+        <br><br>
+        Answer: <input type="text" id="answer0" name="answerone" size="25">
+        <button class="buttonQuestions" type="button" value="submit" onclick="submit()">Submit</button>
+      </div>
+
+      <!--Question 2: The Beatles goes here-->
+      <div id="question1" class="questionStyle" hidden>
+        <h1>Question 2</h1><br>
+
+        <button class="levelbuttons level1" type="button">Level 1</button><br><br>
+        <p>The picture below shows a famous band from the 70's. Which country this band came from?</p><br>
+        <img src="images/thebeatles.jpg" alt="thebeatles">
+        <!-- <canvas id="myCanvas1"
+                width="800"
+                height="400"
+                style="border: solid">
+        </canvas> -->
+        <br><br>
+        Answer: <input type="text" id="answer1" name="answertwo" size="25">
+        <button class="buttonQuestions" type="button" value="submit" onclick="submit()">Submit</button>
+      </div>dasbdh
+
+      <!--Question 3: Brazil goes here-->
+      <div id="question2" class="questionStyle" hidden>
+        <h1>Question 3 </h1><br>
+
+        <button class="levelbuttons level1" type="button">Level 1</button><br><br>
+        <p>Way to go! You made it to the last question of Level 1. Answer the question below to go the next level of questions.</p><br>
+        <p>Here is a shape of a country. Can you guess which country is this? Type your answer below.</p><br>
+        <img src="images/brazil.png" alt="brazil">
+            <!-- <canvas id="myCanvas2"
+                    width="800"
+                    height="400"
+                    style="border: solid">
+            </canvas> -->
+          <br>
+          <br>
+            Answer: <input type="text" id="answer2" name="answerthree" size="25">
+            <button class="buttonQuestions" type="button" value="submit" onclick="submit()">Submit</button>
+      </div>
+
+      <!--Question 4: Mario Shadow goes here-->
+      <div id="question3" class="questionStyle" hidden>
+        <h1>Question 4 </h1><br>
+
+        <button class="levelbuttons level2" type="button">Level 2</button><br><br>
+        <p>Congratulations! You made it to Level 2! Now you will have to guess what is being drawn in the canvas.</p><br>
+        <p>Below you can see a shadow of a famous character. Who is it? Type your answer below.</p>
+        <p>Note: you can see a hint by clicking on the "Hint" button, but you will lose 10% of points for this question!</p><br>
+
+        <!-- <button class="buttonQuestions" type="button" value="draw3" onclick="draw3()">Draw</button> -->
+        <button class="buttonQuestions" type="button" id="hintQ3" onclick="hintQ3()">Hint</button><br><br>
+        <canvas id="myCanvas3"
+                width="800"
+                height="400"
+                style="border: solid">
+        </canvas>
+        <br><br>
+        Answer: <input type="text" id="answer3" name="answerfour" size="25">
+        <button class="buttonQuestions" type="button" value="submit" onclick="submit()">Submit</button><br><br><br>
+      </div>
+
+      <!--Question 5: Mouse goes here-->
+      <div id="question4" class="questionStyle" hidden>
+        <h1>Question 5</h1><br>
+
+        <button class="levelbuttons level2" type="button">Level 2</button><br><br>
+        <p>Guess what is being drawn on canvas! You can see the drawing in 3 steps.
+          The first step is already on canvas. You can see another 2 steps by clicking on the "Hint: Draw Next Step" but you will
+          lose 10% of points at each click! Or you can click on "Hint: Image" to see a hint of an image related to the drawing, but
+          you will lose 10% of points!</p>
+        <br>
+        <button class="buttonQuestions" type="button" id="draw4" onclick="draw4()">Hint: Draw Next Step</button>
+        <button class="buttonQuestions" type="button" id="hintQ4" onclick="hintQ4()">Hint: Image</button><br><br>
+        <canvas id="myCanvas4"
+                width="800"
+                height="400"
+                style="border: solid">
+        </canvas>
+        <br><br>
+        Answer: <input type="text" id="answer4" name="answerfive" size="25">
+        <button class="buttonQuestions" type="button" value="submit" onclick="submit()">Submit</button><br><br><br>
+      </div>
+
+      <!--Question 6: Ice Cream goes here-->
+      <div id="question5" class="questionStyle" hidden>
+        <h1>Question 6</h1><br>
+
+        <button class="levelbuttons level2" type="button">Level 2</button><br><br>
+        <p>Guess what is being drawn on canvas! You can see the drawing in 3 steps.
+          The first step is already on canvas. You can see another 2 steps by clicking on the "Hint: Draw Next Step" but you will
+          lose 10% of points for this question at each click!</p>
+        <br>
+        <button class="buttonQuestions" type="button" id="draw5" onclick="draw5()">Hint: Draw Next Step</button><br><br><br>
+        <p id="hint2"></p>
+        <canvas id="myCanvas5"
+                width="800"
+                height="400"
+                style="border: solid">
+        </canvas>
+        <br><br>
+        Answer: <input type="text" id="answer5" name="answersix" size="25">
+        <button class="buttonQuestions" type="button" value="submit" onclick="submit()">Submit</button><br><br><br>
+      </div>
+
+      <!--Question 7: Ladybug goes here-->
+      <div id="question6" class="questionStyle" hidden>
+        <h1>Question 7</h1><br>
+
+        <button class="levelbuttons level2" type="button">Level 2</button><br><br>
+        <p>Guess what is being drawn on canvas! You can see the drawing in 3 steps.
+          The first step is already on canvas. You can see another 2 steps by clicking on the "Hint: Draw Next Step" but you will
+          lose 10% of points at each click! Or you can click on "Hint: Image" to see a hint of an image related to the drawing, but
+          you will lose 10% of points!</p>
+        <br>
+        <button class="buttonQuestions" type="button" id="draw6" onclick="draw6()">Hint: Draw Next Step</button>
+        <button class="buttonQuestions" type="button" id="hintQ6" onclick="hintQ6()">Hint: Image</button><br><br>
+        <canvas id="myCanvas6"
+                width="800"
+                height="400"
+                style="border: solid">
+        </canvas>
+        <br><br>
+        Answer: <input type="text" id="answer6" name="answerseven" size="25">
+        <button class="buttonQuestions" type="button" value="submit" onclick="submit()">Submit</button><br><br><br>
+      </div>
+
+      <!--Question 8: Robot goes here-->
+      <div id="question7" class="questionStyle" hidden>
+        <h1>Question 8</h1><br>
+
+        <button class="levelbuttons level2" type="button">Level 2</button><br><br>
+        <p>Guess what is being drawn on canvas! You can see the drawing in 3 steps.
+          The first step is already on canvas. You can see another 2 steps by clicking on the "Hint: Draw Next Step" but you will
+          lose 10% of points at each click!</p>
+        <br>
+        <button class="buttonQuestions" type="button" id="draw7" onclick="draw7()">Hint: Draw Next Step</button><br><br>
+        <canvas id="myCanvas7"
+                width="800"
+                height="400"
+                style="border: solid">
+        </canvas>
+        <br><br>
+        Answer: <input type="text" id="answer7" name="answereight" size="25">
+        <button class="buttonQuestions" type="button" value="submit" onclick="submit()">Submit</button><br><br><br>
+      </div>
+
+      <!--Question 9: Dubai goes here-->
+      <div id="question8" class="questionStyle" hidden>
+        <h1>Question 9</h1><br>
+
+        <button class="levelbuttons level3" type="button">Level 3</button><br><br>
+        <p>Congratulations! You made it to the last level! This is a trivia question.</p><br>
+        <p>In what city is located the tallest building in the world? You can click on "Hint: Image" to see a hint of an image related to the
+          drawing, but you will lose 10% of points!</p>
+        <br>
+        <button class="buttonQuestions" type="button" id="hintQ8" onclick="draw8()">Hint: Image</button><br><br>
+        <canvas id="myCanvas8"
+                width="800"
+                height="400"
+                style="border: solid">
+        </canvas>
+        <br><br>
+        Answer: <input type="text" id="answer8" name="answernine" size="25">
+        <button class="buttonQuestions" type="button" value="submit" onclick="submit()">Submit</button><br><br><br>
+      </div>
+
+      <!--Question 10: Squares goes here-->
+      <div id="question9" class="questionStyle" hidden>
+        <h1>Question 10</h1><br>
+
+        <button class="levelbuttons level3" type="button">Level 3</button><br><br>
+        <p>Good job!! This is your last question!! Below are squares of different colours.
+          Which colour should you mix with RED to get the colour YELLOW?</p>
+        <p>You goal is to move the red square at the bottom using the arrow keys on your keyboard and place it on top of the square
+          that has the correct collor to turn RED into YELLOW. When you place the red square on top of the other squares,
+          you are going to see a keyword to type below.</p>
+        <br><br>
+        <!-- <button class="buttonQuestions" type="button" value="draw00" onclick="draw00()">Hint</button><br><br> -->
+        <canvas id="myCanvas9"
+                width="800"
+                height="400"
+                style="border: solid">
+        </canvas>
+        <br><br>
+        Answer: <input type="text" id="answer9" name="answerten" size="25" placeholder="Type the keyword here...">
+        <button class="buttonQuestions" type="button" value="submit" onclick="submit()">Submit</button><br><br><br>
+      </div>
+
+      <!--Score goes here-->
+      <div id="question10" class="questionStyle" hidden>
+        <h1>Congratulations, <span id="showUserName"></span>!! You finished the game!</h1><br>
+        <img src="images/trophy.png" alt="guittar"><br><br>
+        <h1>Your score is:</h1>
+        <h3 id="showScore"><span id="totalPoints"></span>/1000 points</h3>
+      </div>
+    </div>
+  </body>
+</html>

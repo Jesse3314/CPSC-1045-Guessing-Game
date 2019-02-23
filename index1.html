@@ -1,0 +1,67 @@
+<!--Group 1, CPSC 1045-002, Group Project-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Group Project - Guessing Game</title>
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="mystyle1.css">
+    <!-- External file for icons only -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <script src="myscript.js" defer></script>
+  </head>
+
+  <body>
+    <div id="content">
+      <div id="title">
+        <div class="inner">
+          <p><i class="far fa-lightbulb"></i> Guessing Game <i class="far fa-lightbulb"></i></p>
+        </div>
+      </div>
+      <br>
+      <div id="rules">
+        <h1>Welcome to our Guessing Game on canvas!</h1>
+        <br>
+        <fieldset style="font-weight: bold;">
+          <legend>Instructions</legend>
+          <br>
+          <p style="text-align: left;">1. The Guessing Game on Canvas consists of 10 questions related to trivia or drawings on canvas.
+            Your goal is to guess the correct answer for each question!</p>
+          <br>
+          <p style="text-align: left;">2. There are 3 levels in the game: Level 1 (Easy), Level 2 (Challenging), and Level 3 (Hard).</p>
+          <br>
+          <p style="text-align: left;">- Level 1: This level has 3 trivia questions worth 50 points each (150pts total). No hints are available for this level.</p>
+          <br>
+          <p style="text-align: left;">- Level 2: This level has 5 questions about drawings on canvas. Each question is worth 100 points (500pts total).
+            They have hints to help you guess what is being drawn.</p>
+          <br>
+          <p style="text-align: left;">- Level 4: This level has only 2 questions and each of them is worth 175 points (300pts total). Only one question has a hint at
+             this level.</p>
+          <br>
+          <p style="text-align: left;">3. How we calculate points: You have 3 chances to guess the correct answer for each question. The correct answer on:</p>
+          <br>
+          <p style="text-align: left;">- First try: you get 100% of points for that question</p>
+          <br>
+          <p style="text-align: left;">- Second try: you get 50% of points for that question</p>
+          <br>
+          <p style="text-align: left;">- Third try: you get 33% of points for that question</p>
+          <br>
+          <p style="text-align: left;">4. Hints: be careful, every time you choose to see a hint you will lose 10% of the remaing points for that question.</p>
+          <br>
+          <p style="text-align: left;">Example: Question 5 is in Level 2 and it is worth 100pts. If you get the correct answer on your first try you should get 100% of points (100pts).
+            But if you choose to see one hint you will lose 10% of 100pts which is equal to 90pts. If you choose to see two hints and you
+            guessed the correct answer on your second try (50% of 100pts = 50pts) you will lose 20% of 50pts which is equal to 40pts.</p>
+          <br>
+          <p style="text-align: left;">>>>Please enter your name below and press the Start Game button. Good luck!<<<</p>
+          <br>
+        </fieldset>
+        <br>
+        Your Name: <input id="userName1" type="text" name="userName"size="15">
+        <br><br>
+        <button class="buttonHome" type="button" onclick="startGame()" value="nextPage">Start Game</button>
+        <br><br>
+      </div>
+    </div>
+  </body>
+</html>

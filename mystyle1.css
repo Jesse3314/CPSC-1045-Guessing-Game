@@ -1,0 +1,55 @@
+/* Group 1, CPSC 1045-002, Group Project */
+@font-face {
+  font-family: Ubuntu;
+  src: url('fonts/Ubuntu/Ubuntu-Regular.ttf');
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #E4E5E9;
+  font-family: 'Ubuntu';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.inner {
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+
+.buttonHome {
+  background-color: #868A8B;
+  border: 1px solid;
+  border-color: #868A8B;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Ubuntu';
+}
+
+#content {
+  min-height: 100%;
+}
+
+#title {
+  font-size: 5em;
+  background-color: #868A8B;
+  text-align: center;
+  color: #fff;
+}
+
+#rules {
+  text-align: center;
+  color: #1a1a1a;
+  padding: 2px 400px;
+}
